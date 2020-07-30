@@ -28,7 +28,7 @@ console.log(`\n[>] Getting Database...`);
 
 const MongoClient = require('mongodb').MongoClient;
 const uri = `mongodb+srv://${process.env.DBDEV}:${process.env.DBPASS}@${process.env.DBURL}?retryWrites=true&w=majority`;
-const client = new MongoClient(uri, { useNewUrlParser: true });
+const client = new MongoClient(uri, { useNewUrlParser: false });
 
 client.connect((err, Mdb)=> {
     console.log(`[>] Retrieving data...`);
